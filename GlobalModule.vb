@@ -11,6 +11,7 @@ Module GlobalModule
     Public g_szUserId As String = String.Empty
     Public g_szError As String = String.Empty
     Public bExit As Boolean = False
+
     Public Sub OpenConnection()
         Try
             Dim szConnectionString As String = "Data Source=DESKTOP-P1VAVQG;Initial Catalog=SI;Integrated Security=True"
