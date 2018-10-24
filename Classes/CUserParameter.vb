@@ -107,6 +107,7 @@ Public Class CUserParameter
             cmd.CommandType = CommandType.StoredProcedure
             cmd.CommandText = "CUserParameter_GetUserParameter"
             cmd.Parameters("@szUser_Id").Value = szUserId
+            dtAdapter = New SqlDataAdapter(cmd)
             dtAdapter.Fill(dtSet)
 
             If dtSet.Tables(0).Rows.Count > 0 Then

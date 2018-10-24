@@ -63,4 +63,6 @@ Public Class CUserSystemParameter
 
         GetLogUserSystemParameter = bok
     End Function
+
+
 End Class
