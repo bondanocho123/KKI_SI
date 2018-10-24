@@ -54,6 +54,9 @@ Public Class CUserSystemParameter
             dtAdapter.Fill(dtSet)
 
             If dtSet.Tables(0).Rows.Count > 0 Then
+                CUSysPar.szUserId = dtSet.Tables(0).Rows(0)("User_Id")
+                CUSysPar.szUserName = dtSet.Tables(0).Rows(0)("Username")
+                CUSysPar.szPassword = dtSet.Tables(0).Rows(0)("Passwords")
                 bok = True
             End If
 
