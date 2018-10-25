@@ -47,7 +47,7 @@ Public Class CUserGroupParameter
             cmd.Parameters.Add("@szUserGroup_Id", SqlDbType.VarChar)
             cmd.CommandType = CommandType.StoredProcedure
             cmd.CommandText = "CUserGroupParameter_GetUserGroupParameter"
-            cmd.Parameters("@szUserGroup_Id").Value = szUserGroupId
+            cmd.Parameters("@szUserGroup_Id").Value = UserGroupId
             dtAdapter = New SqlDataAdapter(cmd)
             dtAdapter.Fill(dtSet)
 
@@ -135,6 +135,7 @@ Public Class CUserGroupParameter
             cmd.Parameters.Add("@szFind", SqlDbType.VarChar)
             cmd.CommandType = CommandType.StoredProcedure
             cmd.CommandText = "CUserGroupParameter_FindUserGroupParameter"
+            cmd.Parameters("@szFind").Value = szFind
             dtAdapter = New SqlDataAdapter(cmd)
             dtAdapter.Fill(dtSet)
             If dtSet.Tables(0).Rows.Count > 0 Then

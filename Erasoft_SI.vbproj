@@ -105,6 +105,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Parameter\FrmFindUser.Designer.vb">
+      <DependentUpon>FrmFindUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\FrmFindUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\FrmFindUserGroup.Designer.vb">
+      <DependentUpon>FrmFindUserGroup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\FrmFindUserGroup.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Parameter\FrmUserParameter.Designer.vb">
       <DependentUpon>FrmUserParameter.vb</DependentUpon>
     </Compile>
@@ -124,6 +136,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\FrmFindUser.resx">
+      <DependentUpon>FrmFindUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\FrmFindUserGroup.resx">
+      <DependentUpon>FrmFindUserGroup.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameter\FrmUserParameter.resx">
       <DependentUpon>FrmUserParameter.vb</DependentUpon>

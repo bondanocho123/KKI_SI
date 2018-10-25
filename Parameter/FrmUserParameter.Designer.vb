@@ -22,6 +22,7 @@ Partial Class FrmUserParameter
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmUserParameter))
         Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
@@ -52,10 +53,13 @@ Partial Class FrmUserParameter
         Me.txtUserID = New System.Windows.Forms.TextBox()
         Me.lblFullName = New System.Windows.Forms.Label()
         Me.lblUserID = New System.Windows.Forms.Label()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.tsFind = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripContainer1.BottomToolStripPanel.SuspendLayout()
         Me.ToolStripContainer1.ContentPanel.SuspendLayout()
         Me.ToolStripContainer1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'ToolStripContainer1
@@ -189,6 +193,7 @@ Partial Class FrmUserParameter
         '
         'txtUserGroupID
         '
+        Me.txtUserGroupID.ContextMenuStrip = Me.ContextMenuStrip1
         Me.txtUserGroupID.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUserGroupID.Location = New System.Drawing.Point(148, 258)
         Me.txtUserGroupID.MaxLength = 5
@@ -320,6 +325,7 @@ Partial Class FrmUserParameter
         '
         'txtUserID
         '
+        Me.txtUserID.ContextMenuStrip = Me.ContextMenuStrip1
         Me.txtUserID.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUserID.Location = New System.Drawing.Point(148, 20)
         Me.txtUserID.MaxLength = 5
@@ -349,6 +355,18 @@ Partial Class FrmUserParameter
         Me.lblUserID.TabIndex = 6
         Me.lblUserID.Text = "User ID"
         '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsFind})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(98, 26)
+        '
+        'tsFind
+        '
+        Me.tsFind.Name = "tsFind"
+        Me.tsFind.Size = New System.Drawing.Size(97, 22)
+        Me.tsFind.Text = "Find"
+        '
         'FrmUserParameter
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -365,6 +383,7 @@ Partial Class FrmUserParameter
         Me.ToolStripContainer1.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -397,4 +416,6 @@ Partial Class FrmUserParameter
     Friend WithEvents txtUserID As System.Windows.Forms.TextBox
     Friend WithEvents lblFullName As System.Windows.Forms.Label
     Friend WithEvents lblUserID As System.Windows.Forms.Label
+    Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents tsFind As System.Windows.Forms.ToolStripMenuItem
 End Class

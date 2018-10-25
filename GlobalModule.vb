@@ -106,4 +106,21 @@ Module GlobalModule
         ConvertToDateTime = resDateTime
 
     End Function
+
+    Public Function emailFieldChecking(ByVal email As String) As Boolean
+        Dim bok As Boolean
+        Dim arrEmail(email.Trim.Length - 1) As String
+        bok = False
+        For i As Integer = 0 To email.Trim.Length - 1
+            arrEmail(i) = Mid(email, i + 1, 1)
+
+            If arrEmail(i) = "@" Then
+                bok = True
+                GoTo out
+            End If
+        Next
+
+out:
+        emailFieldChecking = bok
+    End Function
 End Module
