@@ -52,6 +52,8 @@ Partial Class FormMain
         Me.stTime = New System.Windows.Forms.ToolStripStatusLabel()
         Me.lblStoreStatus = New System.Windows.Forms.ToolStripStatusLabel()
         Me.stStoreName = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.UserGgroupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -84,7 +86,7 @@ Partial Class FormMain
         '
         Me.KToolStripMenuItem.Image = CType(resources.GetObject("KToolStripMenuItem.Image"), System.Drawing.Image)
         Me.KToolStripMenuItem.Name = "KToolStripMenuItem"
-        Me.KToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.KToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
         Me.KToolStripMenuItem.Text = "Exit"
         '
         'TransactionToolStripMenuItem
@@ -105,18 +107,18 @@ Partial Class FormMain
         'InvoiceToolStripMenuItem
         '
         Me.InvoiceToolStripMenuItem.Name = "InvoiceToolStripMenuItem"
-        Me.InvoiceToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.InvoiceToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
         Me.InvoiceToolStripMenuItem.Text = "Invoice"
         '
         'OrderToolStripMenuItem
         '
         Me.OrderToolStripMenuItem.Name = "OrderToolStripMenuItem"
-        Me.OrderToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OrderToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
         Me.OrderToolStripMenuItem.Text = "Order"
         '
         'ReportToolStripMenuItem
         '
-        Me.ReportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ItemToolStripMenuItem, Me.WarehouseToolStripMenuItem, Me.CustomerToolStripMenuItem, Me.SalesToolStripMenuItem1, Me.DriverToolStripMenuItem})
+        Me.ReportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ItemToolStripMenuItem, Me.WarehouseToolStripMenuItem, Me.CustomerToolStripMenuItem, Me.SalesToolStripMenuItem1, Me.DriverToolStripMenuItem, Me.UserGgroupToolStripMenuItem, Me.UserToolStripMenuItem})
         Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
         Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
         Me.ReportToolStripMenuItem.Text = "Master"
@@ -198,7 +200,7 @@ Partial Class FormMain
         'ManualBookToolStripMenuItem
         '
         Me.ManualBookToolStripMenuItem.Name = "ManualBookToolStripMenuItem"
-        Me.ManualBookToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
+        Me.ManualBookToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ManualBookToolStripMenuItem.Text = "Manual Book"
         '
         'StatusStrip1
@@ -245,6 +247,18 @@ Partial Class FormMain
         Me.stStoreName.Name = "stStoreName"
         Me.stStoreName.Size = New System.Drawing.Size(10, 17)
         Me.stStoreName.Text = " "
+        '
+        'UserGgroupToolStripMenuItem
+        '
+        Me.UserGgroupToolStripMenuItem.Name = "UserGgroupToolStripMenuItem"
+        Me.UserGgroupToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.UserGgroupToolStripMenuItem.Text = "User Group"
+        '
+        'UserToolStripMenuItem
+        '
+        Me.UserToolStripMenuItem.Name = "UserToolStripMenuItem"
+        Me.UserToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.UserToolStripMenuItem.Text = "User"
         '
         'FormMain
         '
@@ -296,5 +310,7 @@ Partial Class FormMain
     Friend WithEvents stTime As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents lblStoreStatus As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents stStoreName As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents UserGgroupToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents UserToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

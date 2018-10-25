@@ -15,7 +15,7 @@
                     GoTo Err
                 End If
                 bok = False
-                MessageBox.Show("Check your contact administrator !!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MsgBoxShow("Check contact your administrator !!", 0)
             End If
         Loop Until bok = True
         GoTo out
@@ -39,12 +39,26 @@ out:
                     GoTo Err
                 End If
                 bok = False
-                MessageBox.Show("Check your contact administrator !!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MsgBoxShow("Check contact your administrator !!", 0)
             End If
         Loop Until bok = True
         GoTo out
 Err:
         Application.Exit()
 out:
+    End Sub
+
+    Private Sub KToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles KToolStripMenuItem.Click
+        If msgQuestion("Exit Application ?", "Exit") Then
+            Application.Exit()
+        End If
+    End Sub
+
+    Private Sub UserGgroupToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles UserGgroupToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub UserToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles UserToolStripMenuItem.Click
+        ShowForm(FrmUserParameter, "Parameter | User", Me)
     End Sub
 End Class

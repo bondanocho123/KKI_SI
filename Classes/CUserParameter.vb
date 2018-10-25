@@ -128,7 +128,7 @@ Public Class CUserParameter
 
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MsgBoxShow(ex.Message, 0)
         End Try
         GetUserParameter = bok
     End Function
@@ -151,7 +151,7 @@ Public Class CUserParameter
 
             bok = True
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MsgBoxShow(ex.Message, 0)
         End Try
         GetUserParameter = bok
     End Function
@@ -190,7 +190,7 @@ Public Class CUserParameter
             con.Close()
             bok = True
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MsgBoxShow(ex.Message, 0)
         End Try
         SaveUserParameter = bok
     End Function
@@ -217,7 +217,7 @@ Public Class CUserParameter
                 bok = True
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MsgBoxShow(ex.Message, 0)
         End Try
         FindUserParameter = bok
     End Function

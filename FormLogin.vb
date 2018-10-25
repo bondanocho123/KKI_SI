@@ -21,7 +21,10 @@
         If intLoginNotValid = 0 Then
             bExit = True
         End If
+
+        intLoginNotValid = 0
         DialogResult = Windows.Forms.DialogResult.OK
+
     End Sub
 
     Private Sub FormLogin_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
@@ -42,4 +45,10 @@
 
         Login = idok
     End Function
+
+    Private Sub btnCancel_Click(sender As System.Object, e As System.EventArgs) Handles btnCancel.Click
+        If msgQuestion("Exit Application ?", "Exit") Then
+            Application.Exit()
+        End If
+    End Sub
 End Class

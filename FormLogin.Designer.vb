@@ -114,6 +114,7 @@ Partial Class FormLogin
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FormLogin"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "FormLogin"
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
