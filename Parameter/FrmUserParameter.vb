@@ -235,6 +235,7 @@ out:
                 GoTo out
             End If
         End If
+        GoTo out
 Err:
         MsgBoxShow(g_szError, 0)
 out:
@@ -266,5 +267,9 @@ out:
 
     Private Sub btnExit_Click(sender As System.Object, e As System.EventArgs) Handles btnExit.Click
         Me.Close()
+    End Sub
+
+    Private Sub ToolStripContainer1_ContentPanel_Load(sender As System.Object, e As System.EventArgs) Handles ToolStripContainer1.ContentPanel.Load
+
     End Sub
 End Class

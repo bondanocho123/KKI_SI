@@ -134,7 +134,7 @@ Public Class CDriverParameter
 
             cmd.Connection = con
             cmd.CommandType = CommandType.StoredProcedure
-            cmd.CommandText = "CDriver_GetAllDriverParameter"
+            cmd.CommandText = "CDriverParameter_GetAllDriverParameter"
             dtAdapter = New SqlDataAdapter(cmd)
             dtAdapter.Fill(dtSet)
 

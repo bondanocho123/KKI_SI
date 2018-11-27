@@ -18,6 +18,7 @@
         txtDriverTelp.Clear()
         txtDriverHp.Clear()
         txtVehicleCode.Clear()
+        lblRecStatus.Visible = False
     End Sub
 
     Private Function autoNumber() As Integer
@@ -70,7 +71,7 @@
         End If
     End Sub
 
-    Public Function fieldChecking() As Boolean
+    Private Function fieldChecking() As Boolean
         fieldChecking = True
         Dim CDriver As New CDriverParameter
 
@@ -175,6 +176,7 @@ out:
                 GoTo out
             End If
         End If
+        GoTo out
 Err:
         MsgBoxShow(g_szError, 0)
 out:
@@ -199,5 +201,10 @@ out:
 
     Private Sub btnExit_Click(sender As System.Object, e As System.EventArgs) Handles btnExit.Click
         Me.Close()
+    End Sub
+
+
+    Private Sub FrmDriverParameter_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

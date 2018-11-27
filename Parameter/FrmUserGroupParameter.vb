@@ -119,6 +119,7 @@ out:
                 GoTo out
             End If
         End If
+        GoTo out
         
 Err:
         MsgBoxShow(g_szError, 0)

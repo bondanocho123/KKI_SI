@@ -49,6 +49,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FunctionSQL">
+      <HintPath>Function dll\FunctionSQL.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -72,7 +75,11 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\CCustomerParameter.vb" />
     <Compile Include="Classes\CDriverParameter.vb" />
+    <Compile Include="Classes\CItemParameter.vb" />
+    <Compile Include="Classes\CWarehouseParameter.vb" />
+    <Compile Include="Classes\CSalesParameter.vb" />
     <Compile Include="Classes\CUserGroupAuthorized.vb" />
     <Compile Include="Classes\CUserGroupParameter.vb" />
     <Compile Include="Classes\CUserParameter.vb" />
@@ -106,16 +113,40 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Parameter\FrmCustomerParameter.Designer.vb">
+      <DependentUpon>FrmCustomerParameter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\FrmCustomerParameter.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Parameter\FrmDriverParameter.Designer.vb">
       <DependentUpon>FrmDriverParameter.vb</DependentUpon>
     </Compile>
     <Compile Include="Parameter\FrmDriverParameter.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Parameter\FrmFindCustomer.Designer.vb">
+      <DependentUpon>FrmFindCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\FrmFindCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Parameter\FrmFindDriver.Designer.vb">
       <DependentUpon>FrmFindDriver.vb</DependentUpon>
     </Compile>
     <Compile Include="Parameter\FrmFindDriver.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\FrmFindItem.Designer.vb">
+      <DependentUpon>FrmFindItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\FrmFindItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\FrmFindSales.Designer.vb">
+      <DependentUpon>FrmFindSales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\FrmFindSales.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Parameter\FrmFindUser.Designer.vb">
@@ -130,6 +161,30 @@
     <Compile Include="Parameter\FrmFindUserGroup.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Parameter\FrmFindWarehouse.Designer.vb">
+      <DependentUpon>FrmFindWarehouse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\FrmFindWarehouse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\FrmItemParameter.Designer.vb">
+      <DependentUpon>FrmItemParameter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\FrmItemParameter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\FrmParameterSystem.Designer.vb">
+      <DependentUpon>FrmParameterSystem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\FrmParameterSystem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\FrmSalesParameter.Designer.vb">
+      <DependentUpon>FrmSalesParameter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\FrmSalesParameter.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Parameter\FrmUserGroupParameter.Designer.vb">
       <DependentUpon>FrmUserGroupParameter.vb</DependentUpon>
     </Compile>
@@ -140,6 +195,12 @@
       <DependentUpon>FrmUserParameter.vb</DependentUpon>
     </Compile>
     <Compile Include="Parameter\FrmUserParameter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\FrmWarehouse.Designer.vb">
+      <DependentUpon>FrmWarehouse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\FrmWarehouse.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -156,11 +217,23 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\FrmCustomerParameter.resx">
+      <DependentUpon>FrmCustomerParameter.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameter\FrmDriverParameter.resx">
       <DependentUpon>FrmDriverParameter.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\FrmFindCustomer.resx">
+      <DependentUpon>FrmFindCustomer.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameter\FrmFindDriver.resx">
       <DependentUpon>FrmFindDriver.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\FrmFindItem.resx">
+      <DependentUpon>FrmFindItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\FrmFindSales.resx">
+      <DependentUpon>FrmFindSales.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameter\FrmFindUser.resx">
       <DependentUpon>FrmFindUser.vb</DependentUpon>
@@ -168,11 +241,26 @@
     <EmbeddedResource Include="Parameter\FrmFindUserGroup.resx">
       <DependentUpon>FrmFindUserGroup.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\FrmFindWarehouse.resx">
+      <DependentUpon>FrmFindWarehouse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\FrmItemParameter.resx">
+      <DependentUpon>FrmItemParameter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\FrmParameterSystem.resx">
+      <DependentUpon>FrmParameterSystem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\FrmSalesParameter.resx">
+      <DependentUpon>FrmSalesParameter.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameter\FrmUserGroupParameter.resx">
       <DependentUpon>FrmUserGroupParameter.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameter\FrmUserParameter.resx">
       <DependentUpon>FrmUserParameter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\FrmWarehouse.resx">
+      <DependentUpon>FrmWarehouse.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

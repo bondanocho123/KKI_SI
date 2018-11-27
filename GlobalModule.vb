@@ -3,6 +3,7 @@ Imports System.Data.SqlClient
 
 Module GlobalModule
 
+    Public ConnectionString As String = "Data Source=DESKTOP-P1VAVQG;Initial Catalog=SI;Integrated Security=True"
     Public con As SqlConnection = Nothing
     Public cmd As SqlCommand = Nothing
     Public dtAdapter As SqlDataAdapter = Nothing

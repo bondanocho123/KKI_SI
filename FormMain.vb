@@ -65,4 +65,20 @@ out:
     Private Sub DriverToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles DriverToolStripMenuItem.Click
         ShowForm(FrmDriverParameter, "Parameter | Driver", Me)
     End Sub
+
+    Private Sub SalesToolStripMenuItem1_Click(sender As System.Object, e As System.EventArgs) Handles SalesToolStripMenuItem1.Click
+        ShowForm(FrmSalesParameter, "Parameter | Sales", Me)
+    End Sub
+
+    Private Sub CustomerToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles CustomerToolStripMenuItem.Click
+        ShowForm(FrmCustomerParameter, "Parameter | Customer", Me)
+    End Sub
+
+    Private Sub ItemToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ItemToolStripMenuItem.Click
+        ShowForm(FrmItemParameter, "Parameter | Item", Me)
+    End Sub
+
+    Private Sub WarehouseToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles WarehouseToolStripMenuItem.Click
+        ShowForm(FrmWarehouse, "Parameter | Warehouse", Me)
+    End Sub
 End Class
