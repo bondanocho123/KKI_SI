@@ -78,6 +78,7 @@
     <Compile Include="Classes\CCustomerParameter.vb" />
     <Compile Include="Classes\CDriverParameter.vb" />
     <Compile Include="Classes\CItemParameter.vb" />
+    <Compile Include="Classes\CSalesOrder.vb" />
     <Compile Include="Classes\CWarehouseParameter.vb" />
     <Compile Include="Classes\CSalesParameter.vb" />
     <Compile Include="Classes\CUserGroupAuthorized.vb" />
@@ -203,6 +204,18 @@
     <Compile Include="Parameter\FrmWarehouse.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Transaction\FrmSalesInvoice.Designer.vb">
+      <DependentUpon>FrmSalesInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\FrmSalesInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\FrmSalesOrder.Designer.vb">
+      <DependentUpon>FrmSalesOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\FrmSalesOrder.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FormLogin.resx">
@@ -262,6 +275,12 @@
     <EmbeddedResource Include="Parameter\FrmWarehouse.resx">
       <DependentUpon>FrmWarehouse.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\FrmSalesInvoice.resx">
+      <DependentUpon>FrmSalesInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\FrmSalesOrder.resx">
+      <DependentUpon>FrmSalesOrder.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
@@ -276,7 +295,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Report\" />
-    <Folder Include="Transaction\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

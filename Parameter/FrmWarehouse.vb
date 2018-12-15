@@ -31,6 +31,7 @@
         txtWarehouseCode.Clear()
         txtWarehouseName.Clear()
         DataGridView1.Rows.Clear()
+        lblRecStatus.Visible = False
     End Sub
 
     Private Sub fieldFill(ByRef CWarehouseA As Warehouse.CWarehouseParameterA, ByRef dtWarehouseB As DataSet)
@@ -79,6 +80,7 @@
 
     Private Function fieldChecking() As Boolean
         fieldChecking = True
+        Dim incre As Integer = 0
         Dim CItem As New CItemParameter
         Dim CWarehouseB As New Warehouse.CWarehouseParameterB
 
@@ -101,11 +103,6 @@
                 GoTo out
             End If
 
-            If CWarehouseB.GetWarehouseB(CWarehouseB, DataGridView1.Rows(i).Cells(0).Value) Then
-                ErrorProvider1.SetError(DataGridView1, "This field has been duplicated. (" & colRackCode.HeaderText & ")")
-                fieldChecking = False
-                GoTo out
-            End If
 
             If Not CItem.GetItemParameter(CItem, DataGridView1.Rows(i).Cells(1).Value) Then
                 ErrorProvider1.SetError(DataGridView1, "This field is invalid.")
@@ -113,6 +110,7 @@
                 GoTo out
             End If
         Next
+
 out:
     End Function
 

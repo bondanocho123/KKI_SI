@@ -227,7 +227,7 @@ Namespace Warehouse
             SaveWarehouseB = bok
         End Function
 
-        Public Function GetWarehouseB(ByRef CWarehouseB As CWarehouseParameterB, ByVal RackCode As String) As Boolean
+        Public Function GetWarehouseB(ByRef CWarehouseB As CWarehouseParameterB, ByVal RackCode As String, ByVal WarehouseCode As String) As Boolean
             Dim bok As Boolean
 
             bok = False
@@ -240,9 +240,11 @@ Namespace Warehouse
 
                 cmd.Connection = con
                 cmd.Parameters.Add("@szRackCode", SqlDbType.VarChar)
+                cmd.Parameters.Add("@szWarehouseCode", SqlDbType.VarChar)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.CommandText = "CWarehouseParameterB_GetWarehouseB"
                 cmd.Parameters("@szRackCode").Value = RackCode
+                cmd.Parameters("@szWarehouseCode").Value = WarehouseCode
                 dtAdapter = New SqlDataAdapter(cmd)
                 dtAdapter.Fill(dtSet)
 
