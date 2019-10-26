@@ -37,6 +37,8 @@ Partial Class FormMain
         Me.CustomerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DriverToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UserGgroupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.InvoiceListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WarehouseListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -52,8 +54,6 @@ Partial Class FormMain
         Me.stTime = New System.Windows.Forms.ToolStripStatusLabel()
         Me.lblStoreStatus = New System.Windows.Forms.ToolStripStatusLabel()
         Me.stStoreName = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.UserGgroupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -79,7 +79,7 @@ Partial Class FormMain
         '
         Me.KeluarToolStripMenuItem.Image = CType(resources.GetObject("KeluarToolStripMenuItem.Image"), System.Drawing.Image)
         Me.KeluarToolStripMenuItem.Name = "KeluarToolStripMenuItem"
-        Me.KeluarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.KeluarToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
         Me.KeluarToolStripMenuItem.Text = "Logo - Out"
         '
         'KToolStripMenuItem
@@ -101,7 +101,7 @@ Partial Class FormMain
         Me.SalesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InvoiceToolStripMenuItem, Me.OrderToolStripMenuItem})
         Me.SalesToolStripMenuItem.Image = CType(resources.GetObject("SalesToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SalesToolStripMenuItem.Name = "SalesToolStripMenuItem"
-        Me.SalesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SalesToolStripMenuItem.Size = New System.Drawing.Size(100, 22)
         Me.SalesToolStripMenuItem.Text = "Sales"
         '
         'InvoiceToolStripMenuItem
@@ -153,6 +153,18 @@ Partial Class FormMain
         Me.DriverToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.DriverToolStripMenuItem.Text = "Driver"
         '
+        'UserGgroupToolStripMenuItem
+        '
+        Me.UserGgroupToolStripMenuItem.Name = "UserGgroupToolStripMenuItem"
+        Me.UserGgroupToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.UserGgroupToolStripMenuItem.Text = "User Group"
+        '
+        'UserToolStripMenuItem
+        '
+        Me.UserToolStripMenuItem.Name = "UserToolStripMenuItem"
+        Me.UserToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.UserToolStripMenuItem.Text = "User"
+        '
         'ReportToolStripMenuItem1
         '
         Me.ReportToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InvoiceListToolStripMenuItem, Me.WarehouseListToolStripMenuItem, Me.CustomerListToolStripMenuItem, Me.SalesListToolStripMenuItem, Me.DriverListToolStripMenuItem})
@@ -200,7 +212,7 @@ Partial Class FormMain
         'ManualBookToolStripMenuItem
         '
         Me.ManualBookToolStripMenuItem.Name = "ManualBookToolStripMenuItem"
-        Me.ManualBookToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ManualBookToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
         Me.ManualBookToolStripMenuItem.Text = "Manual Book"
         '
         'StatusStrip1
@@ -247,18 +259,6 @@ Partial Class FormMain
         Me.stStoreName.Name = "stStoreName"
         Me.stStoreName.Size = New System.Drawing.Size(10, 17)
         Me.stStoreName.Text = " "
-        '
-        'UserGgroupToolStripMenuItem
-        '
-        Me.UserGgroupToolStripMenuItem.Name = "UserGgroupToolStripMenuItem"
-        Me.UserGgroupToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.UserGgroupToolStripMenuItem.Text = "User Group"
-        '
-        'UserToolStripMenuItem
-        '
-        Me.UserToolStripMenuItem.Name = "UserToolStripMenuItem"
-        Me.UserToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.UserToolStripMenuItem.Text = "User"
         '
         'FormMain
         '

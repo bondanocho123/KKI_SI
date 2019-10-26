@@ -104,7 +104,7 @@ Public Class CUserGroupParameter
             cmd.Connection = con
             cmd.Parameters.Add("@szUserGroup_Id", SqlDbType.VarChar)
             cmd.Parameters.Add("@szUserGroup_Name", SqlDbType.VarChar)
-            cmd.Parameters.Add("intbDeleted", SqlDbType.Int)
+            cmd.Parameters.Add("@intbDeleted", SqlDbType.Int)
             cmd.CommandType = CommandType.StoredProcedure
             cmd.CommandText = "CUserGroupParameter_SaveUserGroupParameter"
             cmd.Parameters("@szUserGroup_Id").Value = CUserGroup.szUserGroupId

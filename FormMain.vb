@@ -55,10 +55,14 @@ out:
     End Sub
 
     Private Sub UserGgroupToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles UserGgroupToolStripMenuItem.Click
-
+        ShowForm(FrmUserGroupParameter, "Parameter | User Group", Me)
     End Sub
 
     Private Sub UserToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles UserToolStripMenuItem.Click
         ShowForm(FrmUserParameter, "Parameter | User", Me)
+    End Sub
+
+    Private Sub DriverToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles DriverToolStripMenuItem.Click
+        ShowForm(FrmDriverParameter, "Parameter | Driver", Me)
     End Sub
 End Class

@@ -123,4 +123,71 @@ Module GlobalModule
 out:
         emailFieldChecking = bok
     End Function
+
+    Public Function g_GetDataset(ByVal tableName As String, ByVal Querys As String) As DataSet
+        Dim dtSet As New DataSet
+        OpenConnection()
+        Try
+            Dim dtAdapter As SqlDataAdapter
+            Dim cmd As New SqlCommand
+
+            cmd.Connection = con
+            cmd.CommandType = CommandType.Text
+            cmd.CommandText = Querys
+            dtAdapter = New SqlDataAdapter(cmd)
+            dtAdapter.Fill(dtSet)
+
+        Catch ex As Exception
+            MsgBoxShow(ex.Message, 0)
+        End Try
+        g_GetDataset = dtSet
+    End Function
+
+    Public Function g_getValueField(ByVal tableName As String, ByVal whereQuerys As String, ByVal fieldName As String) As String
+        Dim result As String = String.Empty
+
+        OpenConnection()
+        Try
+            Dim dtAdapter As SqlDataAdapter
+            Dim cmd As New SqlCommand
+            Dim dtSet As New DataSet
+            cmd.Connection = con
+            cmd.CommandType = CommandType.Text
+            cmd.CommandText = "SELECT " & fieldName & " FROM " & tableName & " WHERE " & whereQuerys
+            dtAdapter = New SqlDataAdapter(cmd)
+            dtAdapter.Fill(dtSet)
+
+            If dtSet.Tables(0).Rows.Count > 0 Then
+                result = Convert.ToString(dtSet.Tables(0).Rows(0)(0))
+            End If
+        Catch ex As Exception
+            MsgBoxShow(ex.Message, 0)
+        End Try
+        g_getValueField = result
+    End Function
+
+    Public Function g_bValidValField(ByVal tableName As String, ByVal whereQuerys As String) As Boolean
+        Dim bok As Boolean
+
+        bok = False
+        OpenConnection()
+        Try
+            Dim cmd As New SqlCommand
+            Dim dtAdapter As SqlDataAdapter
+            Dim dtSet As New DataSet
+
+            cmd.Connection = con
+            cmd.CommandType = CommandType.Text
+            cmd.CommandText = "SELECT * FROM " & tableName & " WHERE " & whereQuerys
+            dtAdapter = New SqlDataAdapter(cmd)
+            dtAdapter.Fill(dtSet)
+
+            If dtSet.Tables(0).Rows.Count > 0 Then
+                bok = True
+            End If
+        Catch ex As Exception
+            MsgBoxShow(ex.Message, 0)
+        End Try
+        g_bValidValField = bok
+    End Function
 End Module

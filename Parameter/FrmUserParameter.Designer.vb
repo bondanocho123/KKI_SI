@@ -38,6 +38,8 @@ Partial Class FrmUserParameter
         Me.lblRecStatus = New System.Windows.Forms.ToolStripLabel()
         Me.lblUserGroupName = New System.Windows.Forms.Label()
         Me.txtUserGroupID = New System.Windows.Forms.TextBox()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.tsFind = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblUserGroupID = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtNohp2 = New System.Windows.Forms.TextBox()
@@ -53,8 +55,6 @@ Partial Class FrmUserParameter
         Me.txtUserID = New System.Windows.Forms.TextBox()
         Me.lblFullName = New System.Windows.Forms.Label()
         Me.lblUserID = New System.Windows.Forms.Label()
-        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.tsFind = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripContainer1.BottomToolStripPanel.SuspendLayout()
         Me.ToolStripContainer1.ContentPanel.SuspendLayout()
         Me.ToolStripContainer1.SuspendLayout()
@@ -201,6 +201,18 @@ Partial Class FrmUserParameter
         Me.txtUserGroupID.Size = New System.Drawing.Size(77, 23)
         Me.txtUserGroupID.TabIndex = 7
         '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsFind})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(98, 26)
+        '
+        'tsFind
+        '
+        Me.tsFind.Name = "tsFind"
+        Me.tsFind.Size = New System.Drawing.Size(97, 22)
+        Me.tsFind.Text = "Find"
+        '
         'lblUserGroupID
         '
         Me.lblUserGroupID.AutoSize = True
@@ -326,6 +338,7 @@ Partial Class FrmUserParameter
         'txtUserID
         '
         Me.txtUserID.ContextMenuStrip = Me.ContextMenuStrip1
+        Me.txtUserID.Enabled = False
         Me.txtUserID.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUserID.Location = New System.Drawing.Point(148, 20)
         Me.txtUserID.MaxLength = 5
@@ -354,18 +367,6 @@ Partial Class FrmUserParameter
         Me.lblUserID.Size = New System.Drawing.Size(44, 15)
         Me.lblUserID.TabIndex = 6
         Me.lblUserID.Text = "User ID"
-        '
-        'ContextMenuStrip1
-        '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsFind})
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(98, 26)
-        '
-        'tsFind
-        '
-        Me.tsFind.Name = "tsFind"
-        Me.tsFind.Size = New System.Drawing.Size(97, 22)
-        Me.tsFind.Text = "Find"
         '
         'FrmUserParameter
         '

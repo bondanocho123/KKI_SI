@@ -41,7 +41,11 @@
     End Function
 
     Private Sub DataGridView1_CellDoubleClick(sender As Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
-        DialogResult = Windows.Forms.DialogResult.OK
-        idok = True
+        If DataGridView1.CurrentRow.Index = DataGridView1.Rows.Count - 1 Then
+            MsgBoxShow("No data you choose!", 0)
+        Else
+            DialogResult = Windows.Forms.DialogResult.OK
+            idok = True
+        End If
     End Sub
 End Class
